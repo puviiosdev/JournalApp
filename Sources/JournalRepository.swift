@@ -194,7 +194,8 @@ final class JournalRepository: ObservableObject {
                 .from("journal_photos")
                 .upload(
                     fileName,
-                    data: imageData
+                    data: imageData,
+                    options: FileOptions(contentType: "image/jpeg")
                 )
         } catch {
             throw NSError(
@@ -237,7 +238,8 @@ final class JournalRepository: ObservableObject {
                 .from("journal_photos")
                 .upload(
                     fileName,
-                    data: imageData
+                    data: imageData,
+                    options: FileOptions(contentType: "image/jpeg")
                 )
         } catch {
             throw NSError(
