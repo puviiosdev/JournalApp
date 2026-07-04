@@ -1,0 +1,25 @@
+name: JournalApp
+options:
+  bundleIdPrefix: com.puvi
+packages:
+  supabase-swift:
+    url: https://github.com/supabase/supabase-swift.git
+    from: 2.0.0
+targets:
+  JournalApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources: [Sources]
+    configFiles:
+      Debug: Config.xcconfig
+      Release: Config.xcconfig
+    settings:
+      GENERATE_INFOPLIST_FILE: YES
+      INFOPLIST_KEY_UILaunchScreen_Generation: YES
+      INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+      INFOPLIST_KEY_SUPABASE_URL: $(SUPABASE_URL)
+      INFOPLIST_KEY_SUPABASE_ANON_KEY: $(SUPABASE_ANON_KEY)
+    dependencies:
+      - package: supabase-swift
+        product: Supabase

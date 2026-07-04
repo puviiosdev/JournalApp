@@ -1,0 +1,12 @@
+# Secrets & Configurations
+Config.xcconfig
+.env
+
+# Xcode / Build Artifacts
+build/
+*.xcodeproj/
+*.xcworkspace/
+.DS_Store
+
+# Package Resolution
+.swiftpm/
